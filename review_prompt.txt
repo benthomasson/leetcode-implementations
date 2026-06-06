@@ -1,0 +1,21 @@
+Review these LeetCode solution files. Output ONLY the review in this exact format, nothing else:
+
+# Review: [Problem Name]
+
+## Solution
+- **Approach**: [1-2 sentence description of algorithm]
+- **Time Complexity**: O(...)
+- **Space Complexity**: O(...)
+- **Correctness**: Correct or Has Issues, with brief note if issues
+
+## Tests
+- **Coverage**: Good or Adequate or Insufficient, with brief note
+- **Edge Cases**: Yes or No, which edge cases are or are not covered
+
+## Plan
+- **Quality**: Good or Adequate or Missing, with brief note
+
+## Overall
+1-2 sentence summary. Note any bugs, missing edge cases, or improvements.
+
+Rules: Be concise and factual. If no test file, say No test file provided. If no plan, say No plan provided.
