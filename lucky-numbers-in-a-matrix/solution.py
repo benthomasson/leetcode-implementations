@@ -1,0 +1,51 @@
+"""Lucky Numbers in a Matrix."""
+
+from typing import List
+import unittest
+
+
+def dfs(matrix: List[List[int]]) -> List[int]:
+    """Find all lucky numbers in the matrix.
+
+    A lucky number is the minimum in its row and maximum in its column.
+
+    Args:
+        matrix: m x n matrix of distinct integers.
+
+    Returns:
+        List of lucky numbers.
+    """
+    result = []
+    for row in matrix:
+        min_val = min(row)
+        col = row.index(min_val)
+        if all(matrix[r][col] <= min_val for r in range(len(matrix))):
+            result.append(min_val)
+    return result
+
+
+class TestDfs(unittest.TestCase):
+    def test_example1(self):
+        self.assertEqual(dfs([[3, 7, 8], [9, 11, 13], [15, 16, 17]]), [15])
+
+    def test_example2(self):
+        self.assertEqual(dfs([[1, 10, 4, 2], [9, 3, 8, 7], [15, 16, 17, 12]]), [12])
+
+    def test_example3(self):
+        self.assertEqual(dfs([[7, 8], [1, 2]]), [7])
+
+    def test_single_element(self):
+        self.assertEqual(dfs([[5]]), [5])
+
+    def test_single_row(self):
+        self.assertEqual(dfs([[3, 1, 2]]), [1])
+
+    def test_single_column(self):
+        self.assertEqual(dfs([[3], [1], [2]]), [3])
+
+    def test_bottom_left_lucky(self):
+        self.assertEqual(dfs([[1, 2], [3, 4]]), [3])
+
+
+if __name__ == "__main__":
+    unittest.main()
