@@ -1,0 +1,10 @@
+Write a comprehensive test file for this LeetCode solution. Output ONLY valid Python code, no markdown fences or commentary.
+
+Rules:
+- Import the function or class from solution.py using the exact name defined there
+- Use pytest-style tests (def test_...) or unittest.TestCase, matching whatever the solution style suggests
+- Cover: LeetCode examples, edge cases, boundary conditions, and at least one larger input
+- For tree/linked-list problems, include any needed helper functions (build_tree, build_list, etc.)
+- Keep it concise but thorough: 5-10 test functions
+- Do NOT import sys or manipulate sys.path
+- The test file will be run from the same directory as solution.py
