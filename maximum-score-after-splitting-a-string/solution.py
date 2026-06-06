@@ -1,7 +1,7 @@
 """Maximum Score After Splitting a String."""
 
 
-def is_possible_divide(s: str) -> int:
+def max_score_after_splitting(s: str) -> int:
     """Return max score from splitting s into two non-empty parts.
 
     Score = zeros in left + ones in right.

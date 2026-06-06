@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def longestPalindromeSubseq(words: list[str]) -> bool:
+def redistribute_characters_to_make_all_strings_equal(words: list[str]) -> bool:
     """Determine if characters can be redistributed to make all strings equal.
 
     Args:

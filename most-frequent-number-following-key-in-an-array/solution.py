@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def count_once_in_both(nums: list[int], key: int) -> int:
+def most_frequent_number_following_key_in_an_array(nums: list[int], key: int) -> int:
     """Find the most frequent number immediately following key in nums.
 
     Args:

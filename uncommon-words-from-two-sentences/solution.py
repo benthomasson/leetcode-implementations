@@ -2,7 +2,7 @@ from collections import Counter
 from typing import List
 
 
-def k_similarity(s1: str, s2: str) -> List[str]:
+def uncommon_from_sentences(s1: str, s2: str) -> List[str]:
     """Return words that appear exactly once across both sentences.
 
     Args:

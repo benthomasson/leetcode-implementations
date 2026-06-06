@@ -1,7 +1,7 @@
 from typing import List
 
 
-def is_prefix_of_word(arr: List[int], m: int, k: int) -> bool:
+def contains_pattern(arr: List[int], m: int, k: int) -> bool:
     """Check if any subarray of length m repeats k or more times consecutively.
 
     Args:

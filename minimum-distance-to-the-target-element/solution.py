@@ -1,7 +1,7 @@
 """Minimum Distance to the Target Element."""
 
 
-def sum_of_unique_elements(nums: list[int], target: int, start: int) -> int:
+def get_min_distance(nums: list[int], target: int, start: int) -> int:
     """Find minimum absolute distance from start to any index where nums[i] == target.
 
     Args:

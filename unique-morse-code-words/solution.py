@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def rotated_digits(self, words: List[str]) -> int:
+    def uniqueMorseCodeWords(self, words: List[str]) -> int:
         """Count unique Morse code transformations of words.
 
         Args:
@@ -30,20 +30,20 @@ class TestSolution(unittest.TestCase):
         self.sol = Solution()
 
     def test_example1(self):
-        self.assertEqual(self.sol.rotated_digits(["gin", "zen", "gig", "msg"]), 2)
+        self.assertEqual(self.sol.uniqueMorseCodeWords(["gin", "zen", "gig", "msg"]), 2)
 
     def test_example2(self):
-        self.assertEqual(self.sol.rotated_digits(["a"]), 1)
+        self.assertEqual(self.sol.uniqueMorseCodeWords(["a"]), 1)
 
     def test_all_same(self):
-        self.assertEqual(self.sol.rotated_digits(["abc", "abc", "abc"]), 1)
+        self.assertEqual(self.sol.uniqueMorseCodeWords(["abc", "abc", "abc"]), 1)
 
     def test_single_chars(self):
-        self.assertEqual(self.sol.rotated_digits(["a", "b", "c"]), 3)
+        self.assertEqual(self.sol.uniqueMorseCodeWords(["a", "b", "c"]), 3)
 
     def test_same_morse_different_words(self):
         # "gig" and "msg" map to the same Morse
-        self.assertEqual(self.sol.rotated_digits(["gig", "msg"]), 1)
+        self.assertEqual(self.sol.uniqueMorseCodeWords(["gig", "msg"]), 1)
 
 
 if __name__ == "__main__":

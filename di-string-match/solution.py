@@ -1,5 +1,5 @@
 class Solution:
-    def isPalindrome(self, s: str) -> list[int]:
+    def diStringMatch(self, s: str) -> list[int]:
         """Reconstruct a permutation from a DI string.
 
         Args:

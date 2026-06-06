@@ -5,7 +5,7 @@ from typing import List
 
 
 class Solution:
-    def maxCompatibilitySum(self, colors: List[int]) -> int:
+    def maxDistance(self, colors: List[int]) -> int:
         """Return max distance between two houses with different colors.
 
         Args:
@@ -37,25 +37,25 @@ class TestSolution(unittest.TestCase):
         self.s = Solution()
 
     def test_example1(self):
-        self.assertEqual(self.s.maxCompatibilitySum([1, 1, 1, 6, 1, 1, 1]), 3)
+        self.assertEqual(self.s.maxDistance([1, 1, 1, 6, 1, 1, 1]), 3)
 
     def test_example2(self):
-        self.assertEqual(self.s.maxCompatibilitySum([1, 8, 3, 8, 3]), 4)
+        self.assertEqual(self.s.maxDistance([1, 8, 3, 8, 3]), 4)
 
     def test_example3(self):
-        self.assertEqual(self.s.maxCompatibilitySum([0, 1]), 1)
+        self.assertEqual(self.s.maxDistance([0, 1]), 1)
 
     def test_different_endpoints(self):
-        self.assertEqual(self.s.maxCompatibilitySum([1, 1, 1, 1, 2]), 4)
+        self.assertEqual(self.s.maxDistance([1, 1, 1, 1, 2]), 4)
 
     def test_all_same_except_first(self):
-        self.assertEqual(self.s.maxCompatibilitySum([5, 3, 3, 3, 3]), 4)
+        self.assertEqual(self.s.maxDistance([5, 3, 3, 3, 3]), 4)
 
     def test_alternating(self):
-        self.assertEqual(self.s.maxCompatibilitySum([1, 2, 1, 2, 1]), 4)
+        self.assertEqual(self.s.maxDistance([1, 2, 1, 2, 1]), 4)
 
     def test_same_endpoints_diff_middle(self):
-        self.assertEqual(self.s.maxCompatibilitySum([1, 2, 1]), 1)
+        self.assertEqual(self.s.maxDistance([1, 2, 1]), 1)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "implementer"))
 
-from solution import Solution, longest_repeat_substring
+from solution import Solution, check_if_matrix_is_x_matrix
 
 import unittest
 
@@ -53,7 +53,7 @@ class TestCheckXMatrix(unittest.TestCase):
     # --- Alias test ---
     def test_alias_works(self):
         grid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]
-        self.assertTrue(longest_repeat_substring(grid))
+        self.assertTrue(check_if_matrix_is_x_matrix(grid))
 
 
 if __name__ == "__main__":

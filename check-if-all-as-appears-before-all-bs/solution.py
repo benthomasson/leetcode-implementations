@@ -1,5 +1,5 @@
 class Solution:
-    def firstDayBeenInAllRooms(self, s: str) -> bool:
+    def checkIfAllAsAppearsBeforeAllBs(self, s: str) -> bool:
         """Check if all 'a's appear before all 'b's in the string.
 
         Args:

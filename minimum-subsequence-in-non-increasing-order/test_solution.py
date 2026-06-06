@@ -10,7 +10,7 @@ from solution import Solution
 class TestMinSubsequence(unittest.TestCase):
     def setUp(self):
         self.s = Solution()
-        self.solve = self.s.min_changes_to_divide_string
+        self.solve = self.s.min_subsequence
 
     # --- Problem examples ---
     def test_example1(self):

@@ -1,6 +1,6 @@
 """Tests for Middle of the Linked List."""
 import unittest
-from solution import ListNode, is_n_straight_hand
+from solution import ListNode, middle_of_the_linked_list
 
 
 def build_list(vals: list[int]) -> ListNode | None:
@@ -27,27 +27,27 @@ def list_to_vals(node: ListNode | None) -> list[int]:
 class TestMiddleOfLinkedList(unittest.TestCase):
     def test_odd_length(self):
         head = build_list([1, 2, 3, 4, 5])
-        self.assertEqual(list_to_vals(is_n_straight_hand(head)), [3, 4, 5])
+        self.assertEqual(list_to_vals(middle_of_the_linked_list(head)), [3, 4, 5])
 
     def test_even_length(self):
         head = build_list([1, 2, 3, 4, 5, 6])
-        self.assertEqual(list_to_vals(is_n_straight_hand(head)), [4, 5, 6])
+        self.assertEqual(list_to_vals(middle_of_the_linked_list(head)), [4, 5, 6])
 
     def test_single_node(self):
         head = build_list([1])
-        self.assertEqual(list_to_vals(is_n_straight_hand(head)), [1])
+        self.assertEqual(list_to_vals(middle_of_the_linked_list(head)), [1])
 
     def test_two_nodes(self):
         head = build_list([1, 2])
-        self.assertEqual(list_to_vals(is_n_straight_hand(head)), [2])
+        self.assertEqual(list_to_vals(middle_of_the_linked_list(head)), [2])
 
     def test_three_nodes(self):
         head = build_list([1, 2, 3])
-        self.assertEqual(list_to_vals(is_n_straight_hand(head)), [2, 3])
+        self.assertEqual(list_to_vals(middle_of_the_linked_list(head)), [2, 3])
 
     def test_100_nodes(self):
         head = build_list(list(range(1, 101)))
-        result = is_n_straight_hand(head)
+        result = middle_of_the_linked_list(head)
         self.assertEqual(result.val, 51)
 
 

@@ -3,7 +3,7 @@
 from collections import Counter
 
 
-def chalk_replacer(nums: list[int], k: int) -> int:
+def count_number_of_pairs_with_absolute_difference_k(nums: list[int], k: int) -> int:
     """Count pairs (i, j) where i < j and |nums[i] - nums[j]| == k.
 
     Uses a frequency counter to achieve O(n) time complexity. For each unique
@@ -18,11 +18,11 @@ def chalk_replacer(nums: list[int], k: int) -> int:
         Number of valid pairs with absolute difference equal to k.
 
     Examples:
-        >>> chalk_replacer([1, 2, 2, 1], 1)
+        >>> count_number_of_pairs_with_absolute_difference_k([1, 2, 2, 1], 1)
         4
-        >>> chalk_replacer([1, 3], 3)
+        >>> count_number_of_pairs_with_absolute_difference_k([1, 3], 3)
         0
-        >>> chalk_replacer([3, 2, 1, 5, 4], 2)
+        >>> count_number_of_pairs_with_absolute_difference_k([3, 2, 1, 5, 4], 2)
         3
     """
     freq = Counter(nums)

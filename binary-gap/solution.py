@@ -1,4 +1,4 @@
-def push_dominoes(n: int) -> int:
+def binary_gap(n: int) -> int:
     """Find longest distance between adjacent 1-bits in binary representation of n.
 
     Args:

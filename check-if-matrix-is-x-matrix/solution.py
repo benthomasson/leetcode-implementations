@@ -20,4 +20,4 @@ class Solution:
 
 
 # Alias per task naming requirement
-longest_repeat_substring = Solution().checkXMatrix
+check_if_matrix_is_x_matrix = Solution().checkXMatrix

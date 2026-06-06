@@ -1,5 +1,5 @@
 class Solution:
-    def findTheDistanceValue(self, n: int, start: int) -> int:
+    def xorOperation(self, n: int, start: int) -> int:
         """Return bitwise XOR of all elements where nums[i] = start + 2*i.
 
         Args:

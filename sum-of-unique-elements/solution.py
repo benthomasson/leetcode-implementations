@@ -3,7 +3,7 @@ from typing import List
 
 
 class Solution:
-    def bestTeamScore(self, nums: List[int]) -> int:
+    def sumOfUniqueElements(self, nums: List[int]) -> int:
         """Return the sum of elements that appear exactly once in nums.
 
         Args:

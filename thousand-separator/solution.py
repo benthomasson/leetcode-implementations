@@ -1,5 +1,5 @@
 class Solution:
-    def can_be_equal(self, n: int) -> str:
+    def thousand_separator(self, n: int) -> str:
         """Add dot as thousands separator to integer n.
 
         Args:

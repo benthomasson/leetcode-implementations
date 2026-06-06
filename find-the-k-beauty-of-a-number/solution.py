@@ -1,7 +1,7 @@
 """Solution for LeetCode: Find the K-Beauty of a Number."""
 
 
-def num_elements_with_smaller_and_greater(num: int, k: int) -> int:
+def divisor_substrings(num: int, k: int) -> int:
     """Return the k-beauty of num (count of length-k substrings that divide num).
 
     Args:

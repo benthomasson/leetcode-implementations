@@ -1,7 +1,7 @@
 from typing import List
 
 
-def busy_student(n: int, rounds: List[int]) -> List[int]:
+def most_visited_sector(n: int, rounds: List[int]) -> List[int]:
     """Find the most visited sectors on a circular track.
 
     Args:

@@ -11,7 +11,7 @@ class ListNode:
         self.next = next
 
 
-def is_n_straight_hand(head: Optional[ListNode]) -> Optional[ListNode]:
+def middle_of_the_linked_list(head: Optional[ListNode]) -> Optional[ListNode]:
     """Return the middle node of a singly linked list.
 
     Uses slow/fast pointer technique. For even-length lists, returns the

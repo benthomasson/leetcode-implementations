@@ -3,7 +3,7 @@ from typing import List
 
 
 class Solution:
-    def remove_duplicates(self, dominoes: List[List[int]]) -> int:
+    def num_equiv_domino_pairs(self, dominoes: List[List[int]]) -> int:
         """Count the number of equivalent domino pairs.
 
         Args:

@@ -1,7 +1,7 @@
 from typing import List
 
 
-def sumEvenGrandparent(arr: List[int]) -> List[int]:
+def array_transformation(arr: List[int]) -> List[int]:
     """Transform array by adjusting local minima/maxima until stable.
 
     Args:

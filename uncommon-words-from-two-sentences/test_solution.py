@@ -1,38 +1,38 @@
-from solution import k_similarity
+from solution import uncommon_from_sentences
 
 
 def test_example1():
-    assert sorted(k_similarity("this apple is sweet", "this apple is sour")) == ["sour", "sweet"]
+    assert sorted(uncommon_from_sentences("this apple is sweet", "this apple is sour")) == ["sour", "sweet"]
 
 
 def test_example2():
-    assert k_similarity("apple apple", "banana") == ["banana"]
+    assert uncommon_from_sentences("apple apple", "banana") == ["banana"]
 
 
 def test_single_words_both_same():
-    assert k_similarity("a", "a") == []
+    assert uncommon_from_sentences("a", "a") == []
 
 
 def test_single_words_different():
-    assert sorted(k_similarity("a", "b")) == ["a", "b"]
+    assert sorted(uncommon_from_sentences("a", "b")) == ["a", "b"]
 
 
 def test_all_unique():
-    assert sorted(k_similarity("a b", "c d")) == ["a", "b", "c", "d"]
+    assert sorted(uncommon_from_sentences("a b", "c d")) == ["a", "b", "c", "d"]
 
 
 def test_duplicate_within_one_sentence():
-    assert k_similarity("a a", "b b") == []
+    assert uncommon_from_sentences("a a", "b b") == []
 
 
 def test_identical_sentences():
-    assert k_similarity("x y z", "x y z") == []
+    assert uncommon_from_sentences("x y z", "x y z") == []
 
 
 def test_no_overlap():
-    assert sorted(k_similarity("cat", "dog")) == ["cat", "dog"]
+    assert sorted(uncommon_from_sentences("cat", "dog")) == ["cat", "dog"]
 
 
 def test_word_appears_three_times():
     # "a" appears twice in s1 + once in s2 = 3 times total, not uncommon
-    assert k_similarity("a a", "a") == []
+    assert uncommon_from_sentences("a a", "a") == []

@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def count_prefix_aligned(self, salary: List[int]) -> float:
+    def average(self, salary: List[int]) -> float:
         """Return average salary excluding the minimum and maximum.
 
         Args:

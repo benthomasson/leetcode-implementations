@@ -1,7 +1,7 @@
 """Maximum Product Difference Between Two Pairs."""
 
 
-def min_changes(nums: list[int]) -> int:
+def max_product_difference(nums: list[int]) -> int:
     """Return max product difference between two pairs from nums.
 
     Args:

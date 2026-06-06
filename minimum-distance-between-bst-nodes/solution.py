@@ -12,7 +12,7 @@ class TreeNode:
 
 
 class Solution:
-    def searchBST(self, root: Optional[TreeNode]) -> int:
+    def minDiffInBST(self, root: Optional[TreeNode]) -> int:
         """Return the minimum difference between any two nodes in a BST.
 
         Args:
@@ -63,28 +63,28 @@ class TestSolution(unittest.TestCase):
 
     def test_example1(self):
         root = build_tree([4, 2, 6, 1, 3])
-        self.assertEqual(self.sol.searchBST(root), 1)
+        self.assertEqual(self.sol.minDiffInBST(root), 1)
 
     def test_example2(self):
         root = build_tree([1, 0, 48, None, None, 12, 49])
-        self.assertEqual(self.sol.searchBST(root), 1)
+        self.assertEqual(self.sol.minDiffInBST(root), 1)
 
     def test_two_nodes(self):
         root = TreeNode(1, TreeNode(0))
-        self.assertEqual(self.sol.searchBST(root), 1)
+        self.assertEqual(self.sol.minDiffInBST(root), 1)
 
     def test_large_gap(self):
         root = TreeNode(0, None, TreeNode(100000))
-        self.assertEqual(self.sol.searchBST(root), 100000)
+        self.assertEqual(self.sol.minDiffInBST(root), 100000)
 
     def test_all_consecutive(self):
         # Tree: 2(1, 3)
         root = build_tree([2, 1, 3])
-        self.assertEqual(self.sol.searchBST(root), 1)
+        self.assertEqual(self.sol.minDiffInBST(root), 1)
 
     def test_skewed_right(self):
         root = TreeNode(1, None, TreeNode(5, None, TreeNode(10)))
-        self.assertEqual(self.sol.searchBST(root), 4)
+        self.assertEqual(self.sol.minDiffInBST(root), 4)
 
 
 if __name__ == "__main__":

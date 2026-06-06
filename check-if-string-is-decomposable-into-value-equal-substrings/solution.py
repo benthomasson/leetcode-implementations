@@ -1,7 +1,7 @@
 from itertools import groupby
 
 
-def num_different_integers(s: str) -> bool:
+def is_decomposable_into_value_equal_substrings(s: str) -> bool:
     """Check if string can be decomposed into value-equal substrings with exactly one length-2.
 
     Args:

@@ -3,6 +3,6 @@ from typing import List
 
 
 class Solution:
-    def divideArray(self, nums: List[int]) -> bool:
+    def divideArrayIntoEqualPairs(self, nums: List[int]) -> bool:
         """Return True if nums can be divided into n pairs of equal elements."""
         return all(count % 2 == 0 for count in Counter(nums).values())

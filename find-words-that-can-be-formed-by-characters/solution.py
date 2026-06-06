@@ -3,7 +3,7 @@ from typing import List
 
 
 class Solution:
-    def num_tile_possibilities(self, words: List[str], chars: str) -> int:
+    def countCharacters(self, words: List[str], chars: str) -> int:
         """Return sum of lengths of words that can be formed from chars.
 
         Args:

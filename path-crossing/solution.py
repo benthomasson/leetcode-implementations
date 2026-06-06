@@ -1,7 +1,7 @@
 """Path Crossing problem solution."""
 
 
-def lucky_numbers(path: str) -> bool:
+def path_crossing(path: str) -> bool:
     """Determine if a path crosses itself on a 2D plane.
 
     Args:

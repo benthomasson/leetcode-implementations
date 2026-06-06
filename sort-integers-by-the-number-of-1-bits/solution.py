@@ -15,4 +15,4 @@ class Solution:
 
 
 # Alias per task spec
-min_moves_to_palindrome = Solution().sortByBits
+sort_integers_by_the_number_of_1_bits = Solution().sortByBits

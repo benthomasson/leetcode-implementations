@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def middleNode(self, nums: List[int], k: int) -> int:
+    def smallestRangeI(self, nums: List[int], k: int) -> int:
         """Return minimum score of nums after adding [-k, k] to each element at most once.
 
         Args:

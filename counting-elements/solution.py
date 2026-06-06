@@ -1,4 +1,4 @@
-def sum_zero(arr: list[int]) -> int:
+def count_elements(arr: list[int]) -> int:
     """Count elements x where x + 1 is also in arr.
 
     Args:

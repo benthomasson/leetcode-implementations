@@ -1,5 +1,5 @@
 import pytest
-from solution import num_different_integers
+from solution import is_decomposable_into_value_equal_substrings
 
 
 @pytest.mark.parametrize("s, expected", [
@@ -19,5 +19,5 @@ from solution import num_different_integers
     # Edge: long valid string
     ("33322211", True),         # 333|222|11
 ])
-def test_num_different_integers(s, expected):
-    assert num_different_integers(s) == expected
+def test_is_decomposable_into_value_equal_substrings(s, expected):
+    assert is_decomposable_into_value_equal_substrings(s) == expected

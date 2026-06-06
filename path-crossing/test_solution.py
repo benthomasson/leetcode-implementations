@@ -1,37 +1,37 @@
 """Tests for path crossing solution."""
 
 import unittest
-from solution import lucky_numbers
+from solution import path_crossing
 
 
-class TestLuckyNumbers(unittest.TestCase):
+class TestPathCrossing(unittest.TestCase):
 
     def test_no_crossing(self):
-        self.assertFalse(lucky_numbers("NES"))
+        self.assertFalse(path_crossing("NES"))
 
     def test_crosses_origin(self):
-        self.assertTrue(lucky_numbers("NESWW"))
+        self.assertTrue(path_crossing("NESWW"))
 
     def test_single_step(self):
-        self.assertFalse(lucky_numbers("N"))
+        self.assertFalse(path_crossing("N"))
 
     def test_return_to_origin(self):
-        self.assertTrue(lucky_numbers("NESW"))
+        self.assertTrue(path_crossing("NESW"))
 
     def test_straight_line(self):
-        self.assertFalse(lucky_numbers("NNNN"))
+        self.assertFalse(path_crossing("NNNN"))
 
     def test_immediate_backtrack(self):
-        self.assertTrue(lucky_numbers("NS"))
+        self.assertTrue(path_crossing("NS"))
 
     def test_square_no_revisit(self):
-        self.assertFalse(lucky_numbers("NES"))
+        self.assertFalse(path_crossing("NES"))
 
     def test_long_non_crossing(self):
-        self.assertFalse(lucky_numbers("NNNNEEEE"))
+        self.assertFalse(path_crossing("NNNNEEEE"))
 
     def test_figure_eight_crosses(self):
-        self.assertTrue(lucky_numbers("NESWNESW"))
+        self.assertTrue(path_crossing("NESWNESW"))
 
 
 if __name__ == "__main__":

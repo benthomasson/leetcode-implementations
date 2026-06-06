@@ -13,7 +13,7 @@ class TreeNode:
 
 
 class Solution:
-    def tallestBillboard(self, root: Optional[TreeNode], x: int, y: int) -> bool:
+    def isCousins(self, root: Optional[TreeNode], x: int, y: int) -> bool:
         """Determine if two nodes in a binary tree are cousins.
 
         Cousins share the same depth but have different parents.
@@ -83,27 +83,27 @@ class TestCousins(unittest.TestCase):
 
     def test_example1_not_cousins_diff_depth(self):
         root = _build_tree([1, 2, 3, 4])
-        self.assertFalse(self.sol.tallestBillboard(root, 4, 3))
+        self.assertFalse(self.sol.isCousins(root, 4, 3))
 
     def test_example2_cousins(self):
         root = _build_tree([1, 2, 3, None, 4, None, 5])
-        self.assertTrue(self.sol.tallestBillboard(root, 5, 4))
+        self.assertTrue(self.sol.isCousins(root, 5, 4))
 
     def test_example3_siblings_not_cousins(self):
         root = _build_tree([1, 2, 3, None, 4])
-        self.assertFalse(self.sol.tallestBillboard(root, 2, 3))
+        self.assertFalse(self.sol.isCousins(root, 2, 3))
 
     def test_siblings_same_parent(self):
         root = _build_tree([1, 2, 3])
-        self.assertFalse(self.sol.tallestBillboard(root, 2, 3))
+        self.assertFalse(self.sol.isCousins(root, 2, 3))
 
     def test_two_node_tree(self):
         root = _build_tree([1, 2])
-        self.assertFalse(self.sol.tallestBillboard(root, 1, 2))
+        self.assertFalse(self.sol.isCousins(root, 1, 2))
 
     def test_deep_cousins(self):
         root = _build_tree([1, 2, 3, 4, None, None, 5])
-        self.assertTrue(self.sol.tallestBillboard(root, 4, 5))
+        self.assertTrue(self.sol.isCousins(root, 4, 5))
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 """Element Appearing More Than 25% in Sorted Array."""
 
 
-def shortest_distance(arr: list[int]) -> int:
+def find_special_integer(arr: list[int]) -> int:
     """Find the element appearing more than 25% of the time in a sorted array.
 
     Args:

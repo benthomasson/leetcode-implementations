@@ -17,31 +17,31 @@ class TestDIStringMatch(unittest.TestCase):
                 self.assertGreater(perm[i], perm[i + 1])
 
     def test_example1(self):
-        self._validate("IDID", self.sol.isPalindrome("IDID"))
+        self._validate("IDID", self.sol.diStringMatch("IDID"))
 
     def test_example2(self):
-        self._validate("III", self.sol.isPalindrome("III"))
+        self._validate("III", self.sol.diStringMatch("III"))
 
     def test_example3(self):
-        self._validate("DDI", self.sol.isPalindrome("DDI"))
+        self._validate("DDI", self.sol.diStringMatch("DDI"))
 
     def test_all_increasing(self):
         s = "IIIII"
-        self._validate(s, self.sol.isPalindrome(s))
+        self._validate(s, self.sol.diStringMatch(s))
 
     def test_all_decreasing(self):
         s = "DDDDD"
-        self._validate(s, self.sol.isPalindrome(s))
+        self._validate(s, self.sol.diStringMatch(s))
 
     def test_single_I(self):
-        self._validate("I", self.sol.isPalindrome("I"))
+        self._validate("I", self.sol.diStringMatch("I"))
 
     def test_single_D(self):
-        self._validate("D", self.sol.isPalindrome("D"))
+        self._validate("D", self.sol.diStringMatch("D"))
 
     def test_long_mixed(self):
         s = "DIDIDID"
-        self._validate(s, self.sol.isPalindrome(s))
+        self._validate(s, self.sol.diStringMatch(s))
 
 
 if __name__ == "__main__":

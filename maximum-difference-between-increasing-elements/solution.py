@@ -1,7 +1,7 @@
 """Maximum Difference Between Increasing Elements."""
 
 
-def min_steps_to_equal_elements(nums: list[int]) -> int:
+def maximum_difference_between_increasing_elements(nums: list[int]) -> int:
     """Find max difference nums[j] - nums[i] where i < j and nums[i] < nums[j].
 
     Args:

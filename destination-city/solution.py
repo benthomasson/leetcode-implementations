@@ -7,7 +7,7 @@ from typing import List
 
 
 class Solution:
-    def watched_videos_by_friends(self, paths: List[List[str]]) -> str:
+    def destCity(self, paths: List[List[str]]) -> str:
         """Find the destination city that has no outgoing path.
 
         Given directed paths between cities forming a line without loops,
@@ -25,13 +25,13 @@ class Solution:
 
         Examples:
             >>> s = Solution()
-            >>> s.watched_videos_by_friends([["London", "New York"],
+            >>> s.destCity([["London", "New York"],
             ...     ["New York", "Lima"], ["Lima", "Sao Paulo"]])
             'Sao Paulo'
-            >>> s.watched_videos_by_friends([["B", "C"], ["D", "B"],
+            >>> s.destCity([["B", "C"], ["D", "B"],
             ...     ["C", "A"]])
             'A'
-            >>> s.watched_videos_by_friends([["A", "Z"]])
+            >>> s.destCity([["A", "Z"]])
             'Z'
         """
         if not paths:

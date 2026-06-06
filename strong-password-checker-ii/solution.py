@@ -1,5 +1,5 @@
 class Solution:
-    def merge_nodes_between_zeros(self, password: str) -> bool:
+    def strong_password_checker_ii(self, password: str) -> bool:
         """Check if a password is strong based on 6 criteria.
 
         Args:

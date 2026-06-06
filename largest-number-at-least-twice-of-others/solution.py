@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def minCostClimbingStairs(self, nums: List[int]) -> int:
+    def largestNumberAtLeastTwiceOfOthers(self, nums: List[int]) -> int:
         """Return index of largest element if it's at least twice all others, else -1.
 
         Args:

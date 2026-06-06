@@ -1,7 +1,7 @@
 """N-Repeated Element in Size 2N Array."""
 
 
-def isLongPressedName(nums: list[int]) -> int:
+def repeated_n_times(nums: list[int]) -> int:
     """Find the element repeated n times in a size 2n array.
 
     Args:

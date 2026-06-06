@@ -2,36 +2,36 @@ import unittest
 from solution import Solution
 
 
-class TestFirstDayBeenInAllRooms(unittest.TestCase):
+class TestCheckIfAllAsAppearsBeforeAllBs(unittest.TestCase):
     def setUp(self):
         self.sol = Solution()
 
     def test_all_as_then_bs(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("aaabbb"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("aaabbb"))
 
     def test_interleaved(self):
-        self.assertFalse(self.sol.firstDayBeenInAllRooms("abab"))
+        self.assertFalse(self.sol.checkIfAllAsAppearsBeforeAllBs("abab"))
 
     def test_only_bs(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("bbb"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("bbb"))
 
     def test_only_as(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("aaa"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("aaa"))
 
     def test_single_a(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("a"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("a"))
 
     def test_single_b(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("b"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("b"))
 
     def test_ba(self):
-        self.assertFalse(self.sol.firstDayBeenInAllRooms("ba"))
+        self.assertFalse(self.sol.checkIfAllAsAppearsBeforeAllBs("ba"))
 
     def test_ab(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("ab"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("ab"))
 
     def test_aab(self):
-        self.assertTrue(self.sol.firstDayBeenInAllRooms("aab"))
+        self.assertTrue(self.sol.checkIfAllAsAppearsBeforeAllBs("aab"))
 
 
 if __name__ == "__main__":

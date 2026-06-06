@@ -5,7 +5,7 @@ from typing import List
 
 
 class Solution:
-    def minimumSize(self, mat: List[List[int]], target: List[List[int]]) -> bool:
+    def findRotation(self, mat: List[List[int]], target: List[List[int]]) -> bool:
         """Check if mat can be rotated in 90-degree increments to equal target.
 
         Args:
@@ -28,30 +28,30 @@ class TestSolution(unittest.TestCase):
         self.s = Solution()
 
     def test_example1_90_rotation(self):
-        self.assertTrue(self.s.minimumSize([[0, 1], [1, 0]], [[1, 0], [0, 1]]))
+        self.assertTrue(self.s.findRotation([[0, 1], [1, 0]], [[1, 0], [0, 1]]))
 
     def test_example2_no_match(self):
-        self.assertFalse(self.s.minimumSize([[0, 1], [1, 1]], [[1, 0], [0, 1]]))
+        self.assertFalse(self.s.findRotation([[0, 1], [1, 1]], [[1, 0], [0, 1]]))
 
     def test_example3_180_rotation(self):
-        self.assertTrue(self.s.minimumSize(
+        self.assertTrue(self.s.findRotation(
             [[0, 0, 0], [0, 1, 0], [1, 1, 1]],
             [[1, 1, 1], [0, 1, 0], [0, 0, 0]],
         ))
 
     def test_identity(self):
-        self.assertTrue(self.s.minimumSize([[1, 0], [0, 1]], [[1, 0], [0, 1]]))
+        self.assertTrue(self.s.findRotation([[1, 0], [0, 1]], [[1, 0], [0, 1]]))
 
     def test_270_rotation(self):
-        self.assertTrue(self.s.minimumSize([[1, 0], [0, 1]], [[0, 1], [1, 0]]))
+        self.assertTrue(self.s.findRotation([[1, 0], [0, 1]], [[0, 1], [1, 0]]))
 
     def test_1x1(self):
-        self.assertTrue(self.s.minimumSize([[0]], [[0]]))
-        self.assertFalse(self.s.minimumSize([[0]], [[1]]))
+        self.assertTrue(self.s.findRotation([[0]], [[0]]))
+        self.assertFalse(self.s.findRotation([[0]], [[1]]))
 
     def test_all_same(self):
-        self.assertTrue(self.s.minimumSize([[1, 1], [1, 1]], [[1, 1], [1, 1]]))
-        self.assertTrue(self.s.minimumSize([[0, 0], [0, 0]], [[0, 0], [0, 0]]))
+        self.assertTrue(self.s.findRotation([[1, 1], [1, 1]], [[1, 1], [1, 1]]))
+        self.assertTrue(self.s.findRotation([[0, 0], [0, 0]], [[0, 0], [0, 0]]))
 
 
 if __name__ == "__main__":

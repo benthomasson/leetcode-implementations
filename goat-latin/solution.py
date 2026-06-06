@@ -3,7 +3,7 @@
 import unittest
 
 
-def number_of_lines(sentence: str) -> str:
+def to_goat_latin(sentence: str) -> str:
     """Convert a sentence to Goat Latin.
 
     Args:
@@ -22,37 +22,37 @@ def number_of_lines(sentence: str) -> str:
     return " ".join(result)
 
 
-class TestNumberOfLines(unittest.TestCase):
+class TestToGoatLatin(unittest.TestCase):
     def test_example1(self):
         self.assertEqual(
-            number_of_lines("I speak Goat Latin"),
+            to_goat_latin("I speak Goat Latin"),
             "Imaa peaksmaaa oatGmaaaa atinLmaaaaa",
         )
 
     def test_example2(self):
         self.assertEqual(
-            number_of_lines("The quick brown fox jumped over the lazy dog"),
+            to_goat_latin("The quick brown fox jumped over the lazy dog"),
             "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa",
         )
 
     def test_single_vowel_word(self):
-        self.assertEqual(number_of_lines("apple"), "applemaa")
+        self.assertEqual(to_goat_latin("apple"), "applemaa")
 
     def test_single_consonant_word(self):
-        self.assertEqual(number_of_lines("goat"), "oatgmaa")
+        self.assertEqual(to_goat_latin("goat"), "oatgmaa")
 
     def test_single_letter_vowel(self):
-        self.assertEqual(number_of_lines("I"), "Imaa")
+        self.assertEqual(to_goat_latin("I"), "Imaa")
 
     def test_single_letter_consonant(self):
-        self.assertEqual(number_of_lines("b"), "bmaa")
+        self.assertEqual(to_goat_latin("b"), "bmaa")
 
     def test_uppercase_vowel_start(self):
-        self.assertEqual(number_of_lines("Each"), "Eachmaa")
+        self.assertEqual(to_goat_latin("Each"), "Eachmaa")
 
     def test_all_vowel_starts(self):
         self.assertEqual(
-            number_of_lines("a e i o u"),
+            to_goat_latin("a e i o u"),
             "amaa emaaa imaaaa omaaaaa umaaaaaa",
         )
 

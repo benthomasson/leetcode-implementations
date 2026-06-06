@@ -1,4 +1,4 @@
-def min_area_rect(nums: list[int]) -> int:
+def largest_perimeter_triangle(nums: list[int]) -> int:
     """Return the largest perimeter of a triangle formable from nums, or 0.
 
     Args:

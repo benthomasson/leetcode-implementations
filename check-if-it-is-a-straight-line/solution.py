@@ -4,7 +4,7 @@ from typing import List
 
 
 class Solution:
-    def findBestValue(self, coordinates: List[List[int]]) -> bool:
+    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
         """Check if all points lie on a straight line using cross-product.
 
         Args:

@@ -4,39 +4,39 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'implementer'))
 
-from solution import min_changes
+from solution import max_product_difference
 
 
 def test_example_1():
-    assert min_changes([5, 6, 2, 7, 4]) == 34
+    assert max_product_difference([5, 6, 2, 7, 4]) == 34
 
 
 def test_example_2():
-    assert min_changes([4, 2, 5, 9, 7, 4, 8]) == 64
+    assert max_product_difference([4, 2, 5, 9, 7, 4, 8]) == 64
 
 
 def test_four_elements():
-    assert min_changes([1, 2, 3, 4]) == 10  # 4*3 - 1*2
+    assert max_product_difference([1, 2, 3, 4]) == 10  # 4*3 - 1*2
 
 
 def test_all_equal():
-    assert min_changes([5, 5, 5, 5]) == 0
+    assert max_product_difference([5, 5, 5, 5]) == 0
 
 
 def test_duplicates():
-    assert min_changes([1, 1, 10, 10]) == 99  # 100 - 1
+    assert max_product_difference([1, 1, 10, 10]) == 99  # 100 - 1
 
 
 def test_already_sorted():
-    assert min_changes([1, 2, 3, 4, 5]) == 18  # 5*4 - 1*2
+    assert max_product_difference([1, 2, 3, 4, 5]) == 18  # 5*4 - 1*2
 
 
 def test_reverse_sorted():
-    assert min_changes([5, 4, 3, 2, 1]) == 18
+    assert max_product_difference([5, 4, 3, 2, 1]) == 18
 
 
 def test_large_values():
-    assert min_changes([10000, 9999, 1, 2]) == 99990000 - 2  # 10000*9999 - 1*2
+    assert max_product_difference([10000, 9999, 1, 2]) == 99990000 - 2  # 10000*9999 - 1*2
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 """Determine if string halves are alike."""
 
 
-def numSpecial(s: str) -> bool:
+def determine_if_string_halves_are_alike(s: str) -> bool:
     """Check if both halves of a string have the same number of vowels.
 
     Args:
