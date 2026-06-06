@@ -34,7 +34,7 @@ class TestMinSumOfTwoNumbers(unittest.TestCase):
         self.assertEqual(min_sum_of_two_numbers(1111), 22)
 
     def test_large_input(self):
-        self.assertEqual(min_sum_of_two_numbers(999999999), 99999 + 99999)
+        self.assertEqual(min_sum_of_two_numbers(999999999), 109998)
 
     def test_with_zeros(self):
         # 2030 -> digits [0,0,2,3] -> parts "02" "03" -> 2 + 3 = 5

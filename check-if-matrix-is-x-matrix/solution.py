@@ -20,4 +20,4 @@ class Solution:
 
 
 # Alias per task naming requirement
-check_if_matrix_is_x_matrix = Solution().checkXMatrix
+check_if_matrix_is_x_matrix = lambda grid: Solution().checkXMatrix(grid)
