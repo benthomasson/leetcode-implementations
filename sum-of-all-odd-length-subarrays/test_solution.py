@@ -19,13 +19,11 @@ class TestSumOddLengthSubarrays(unittest.TestCase):
         self.assertEqual(self.s.sumOddLengthSubarrays([5]), 5)
 
     def test_all_same(self):
-        self.assertEqual(self.s.sumOddLengthSubarrays([3, 3, 3]), 24)
+        self.assertEqual(self.s.sumOddLengthSubarrays([3, 3, 3]), 18)
 
     def test_max_constraints(self):
         arr = [1000] * 100
-        # Each element contributes 1000 * ((i+1)*(100-i)+1)//2
-        expected = sum(1000 * ((i + 1) * (100 - i) + 1) // 2 for i in range(100))
-        self.assertEqual(self.s.sumOddLengthSubarrays(arr), expected)
+        self.assertEqual(self.s.sumOddLengthSubarrays(arr), 85850000)
 
 
 if __name__ == "__main__":

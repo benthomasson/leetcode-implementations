@@ -24,7 +24,7 @@ def test_duplicates_in_input():
 
 
 def test_consecutive():
-    assert distinctAverages([1, 2, 3, 4, 5, 6]) == 3
+    assert distinctAverages([1, 2, 3, 4, 5, 6]) == 1
 
 
 def test_min_length():

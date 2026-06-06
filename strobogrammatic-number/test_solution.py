@@ -19,7 +19,7 @@ class TestStrobogrammatic(unittest.TestCase):
 
     def test_even_length(self):
         self.assertTrue(self.s.isStrobogrammatic("1001"))
-        self.assertTrue(self.s.isStrobogrammatic("9669"))
+        self.assertFalse(self.s.isStrobogrammatic("9669"))
         self.assertFalse(self.s.isStrobogrammatic("1221"))
 
     def test_odd_length_middle(self):

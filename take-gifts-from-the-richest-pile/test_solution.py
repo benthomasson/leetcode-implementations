@@ -3,8 +3,7 @@
 import sys
 import unittest
 
-sys.path.insert(0, "../implementer")
-from solutions.solution import giftsRemaining
+from solution import giftsRemaining
 
 
 class TestGiftsRemaining(unittest.TestCase):

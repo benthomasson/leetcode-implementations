@@ -19,7 +19,7 @@ class TestClimbStairs(unittest.TestCase):
         self.assertEqual(self.s.climbStairs(10), 89)
 
     def test_max_constraint(self):
-        self.assertEqual(self.s.climbStairs(45), 1134903170)
+        self.assertEqual(self.s.climbStairs(45), 1836311903)
 
 
 if __name__ == "__main__":

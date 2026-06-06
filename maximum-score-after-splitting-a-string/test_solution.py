@@ -37,7 +37,7 @@ class TestIsPossibleDivide(unittest.TestCase):
 
     # Best split at last position
     def test_best_split_late(self):
-        self.assertEqual(is_possible_divide("00001"), 4)
+        self.assertEqual(is_possible_divide("00001"), 5)
 
 
 if __name__ == "__main__":

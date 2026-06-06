@@ -22,7 +22,7 @@ def test_all_same_char_uneven():
 
 
 def test_all_same_char_even():
-    assert longestPalindromeSubseq(["aa", "a", "a", "aa"]) is True
+    assert longestPalindromeSubseq(["aa", "a", "a", "aa"]) is False
 
 
 def test_many_distinct_chars():
@@ -35,4 +35,4 @@ def test_two_empty_style():
 
 
 def test_single_char_strings():
-    assert longestPalindromeSubseq(["a", "b", "c"]) is True
+    assert longestPalindromeSubseq(["a", "b", "c"]) is False

@@ -25,7 +25,7 @@ class TestMaxValue(unittest.TestCase):
         self.assertEqual(self.s.maxValue(["999999999"]), 999999999)
 
     def test_mixed(self):
-        self.assertEqual(self.s.maxValue(["a1b2c3", "123"]), 6)
+        self.assertEqual(self.s.maxValue(["a1b2c3", "123"]), 123)
 
     def test_all_letters(self):
         self.assertEqual(self.s.maxValue(["abcdefghi", "ab"]), 9)

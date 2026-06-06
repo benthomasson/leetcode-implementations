@@ -34,7 +34,7 @@ class TestValidPalindrome(unittest.TestCase):
         assert validPalindrome("cbbcc") is True  # delete first c
 
     def test_delete_in_middle(self):
-        assert validPalindrome("deeee") is False
+        assert validPalindrome("deeee") is True
 
     def test_long_palindrome_with_one_off(self):
         s = "a" * 50000 + "b" + "a" * 50000

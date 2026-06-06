@@ -26,7 +26,7 @@ class TestMinimumCost(unittest.TestCase):
         self.assertEqual(self.s.minimumCost([3, 3, 3]), 6)
 
     def test_four_candies(self):
-        self.assertEqual(self.s.minimumCost([1, 2, 3, 4]), 9)
+        self.assertEqual(self.s.minimumCost([1, 2, 3, 4]), 8)
 
     def test_all_equal(self):
         self.assertEqual(self.s.minimumCost([5, 5, 5, 5, 5, 5]), 20)

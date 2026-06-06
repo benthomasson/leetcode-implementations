@@ -24,11 +24,11 @@ class Solution:
 
         # Check if sensor1 could be defective (sensor1 dropped a value at i)
         # sensor1[i+1:] should match sensor2[i:n-1]
-        s1_bad = sensor1[i + 1:] == sensor2[i:n - 1]
+        s1_bad = sensor1[i:n - 1] == sensor2[i + 1:]
 
         # Check if sensor2 could be defective (sensor2 dropped a value at i)
-        # sensor2[i+1:] should match sensor1[i:n-1]
-        s2_bad = sensor2[i + 1:] == sensor1[i:n - 1]
+        # sensor1[i+1:] should match sensor2[i:n-1]
+        s2_bad = sensor2[i:n - 1] == sensor1[i + 1:]
 
         if s1_bad == s2_bad:
             return -1

@@ -24,16 +24,27 @@ def test_single_element_no_match():
 
 
 def test_mod10_wrap():
-    # Index 12: 12 % 10 == 2
+    # Index 9: 9 % 10 == 9 == nums[9], so smallest match is 9
     nums = [9] * 12 + [2]
-    assert smallest_index(nums) == 12
+    assert smallest_index(nums) == 9
 
 
-def test_max_length_no_match():
-    assert smallest_index([9] * 100) == -1
+def test_max_length_match_at_9():
+    assert smallest_index([9] * 100) == 9
 
 
-def test_max_length_last_match():
-    # Index 99: 99 % 10 == 9
-    nums = [5] * 99 + [9]
+def test_last_index_match():
+    # Only index 99 matches: 99 % 10 == 9
+    nums = [3] * 100
+    nums[3] = 0   # prevent match at i=3 (3%10==3)
+    nums[13] = 0  # prevent match at i=13
+    nums[23] = 0  # prevent match at i=23
+    nums[33] = 0  # prevent match at i=33
+    nums[43] = 0  # prevent match at i=43
+    nums[53] = 0  # prevent match at i=53
+    nums[63] = 0  # prevent match at i=63
+    nums[73] = 0  # prevent match at i=73
+    nums[83] = 0  # prevent match at i=83
+    nums[93] = 0  # prevent match at i=93
+    nums[99] = 9
     assert smallest_index(nums) == 99
