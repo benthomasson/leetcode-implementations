@@ -3,6 +3,7 @@
 from __future__ import annotations
 import unittest
 from typing import Optional
+from collections import deque
 
 
 class TreeNode:
@@ -39,10 +40,10 @@ class TestSearchBST(unittest.TestCase):
         if not vals:
             return None
         root = TreeNode(vals[0])
-        queue = [root]
+        queue = deque([root])
         i = 1
         while i < len(vals):
-            node = queue.pop(0)
+            node = queue.popleft()
             if i < len(vals) and vals[i] is not None:
                 node.left = TreeNode(vals[i])
                 queue.append(node.left)
@@ -59,7 +60,7 @@ class TestSearchBST(unittest.TestCase):
             return []
         result, queue = [], [root]
         while queue:
-            node = queue.pop(0)
+            node = queue.popleft()
             result.append(node.val)
             if node.left:
                 queue.append(node.left)

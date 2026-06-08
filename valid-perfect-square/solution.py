@@ -10,6 +10,8 @@ def is_perfect_square(num: int) -> bool:
     Returns:
         True if num is a perfect square, False otherwise.
     """
+    if num == 0:
+        return True
     lo, hi = 1, num
     while lo <= hi:
         mid = lo + (hi - lo) // 2

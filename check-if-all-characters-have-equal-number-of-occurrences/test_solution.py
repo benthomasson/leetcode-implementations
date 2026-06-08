@@ -1,7 +1,7 @@
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'implementer'))
 
-from solution import Solution, make_string_sorted
+from solution import Solution, are_occurrences_equal
 import unittest
 
 
@@ -33,9 +33,9 @@ class TestAreOccurrencesEqual(unittest.TestCase):
     def test_full_alphabet_one_extra(self):
         self.assertFalse(self.sol.areOccurrencesEqual("abcdefghijklmnopqrstuvwxyza"))
 
-    def test_make_string_sorted_alias(self):
-        self.assertTrue(make_string_sorted("aabb"))
-        self.assertFalse(make_string_sorted("aab"))
+    def test_are_occurrences_equal_alias(self):
+        self.assertTrue(are_occurrences_equal("aabb"))
+        self.assertFalse(are_occurrences_equal("aab"))
 
 
 if __name__ == '__main__':

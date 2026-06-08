@@ -2,6 +2,7 @@
 
 from typing import Optional
 import unittest
+from collections import deque
 
 
 class TreeNode:
@@ -40,10 +41,10 @@ def _build(vals: list) -> Optional[TreeNode]:
     if not vals:
         return None
     root = TreeNode(vals[0])
-    queue = [root]
+    queue = deque([root])
     i = 1
     while i < len(vals):
-        curr = queue.pop(0)
+        curr = queue.popleft()
         if i < len(vals) and vals[i] is not None:
             curr.left = TreeNode(vals[i])
             queue.append(curr.left)

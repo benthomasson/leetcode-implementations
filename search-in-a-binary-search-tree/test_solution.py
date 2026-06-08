@@ -2,6 +2,7 @@
 
 import sys
 import unittest
+from collections import deque
 from typing import Optional
 
 sys.path.insert(0, "../implementer")
@@ -13,10 +14,10 @@ def build(vals) -> Optional[TreeNode]:
     if not vals:
         return None
     root = TreeNode(vals[0])
-    queue = [root]
+    queue = deque([root])
     i = 1
     while i < len(vals):
-        node = queue.pop(0)
+        node = queue.popleft()
         if i < len(vals) and vals[i] is not None:
             node.left = TreeNode(vals[i])
             queue.append(node.left)
@@ -32,9 +33,9 @@ def to_list(root: Optional[TreeNode]) -> list:
     """Convert tree to level-order list."""
     if not root:
         return []
-    result, queue = [], [root]
+    result, queue = [], deque([root])
     while queue:
-        node = queue.pop(0)
+        node = queue.popleft()
         result.append(node.val)
         if node.left:
             queue.append(node.left)

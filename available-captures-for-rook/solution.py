@@ -11,12 +11,13 @@ class Solution:
         Returns:
             Number of pawns attackable by the rook.
         """
-        # Find the rook
-        rr = rc = 0
+        rr = rc = -1
         for r in range(8):
             for c in range(8):
                 if board[r][c] == "R":
                     rr, rc = r, c
+        if rr == -1:
+            raise ValueError("No rook found on the board")
 
         captures = 0
         for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:

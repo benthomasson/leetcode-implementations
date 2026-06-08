@@ -19,7 +19,7 @@ class Solution:
         return "".join(chars)
 
 
-count_balls = Solution().replaceDigits
+replace_digits = Solution().replaceDigits
 
 
 class TestReplaceDigits(unittest.TestCase):

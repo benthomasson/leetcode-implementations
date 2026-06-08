@@ -10,6 +10,8 @@ def is_circular(sentence: str) -> bool:
     Returns:
         True if the sentence is circular, False otherwise.
     """
+    if not sentence:
+        return False
     if sentence[0] != sentence[-1]:
         return False
     for i, ch in enumerate(sentence):

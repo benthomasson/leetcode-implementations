@@ -4,7 +4,7 @@ import sys
 import unittest
 
 sys.path.insert(0, "../implementer")
-from solution import Solution, count_balls
+from solution import Solution, replace_digits
 
 
 class TestReplaceDigits(unittest.TestCase):
@@ -34,8 +34,8 @@ class TestReplaceDigits(unittest.TestCase):
     def test_all_same_letter(self):
         self.assertEqual(self.solve("a0a0a0"), "aaaaaa")
 
-    def test_count_balls_alias(self):
-        self.assertEqual(count_balls("a1c1e1"), "abcdef")
+    def test_replace_digits_alias(self):
+        self.assertEqual(replace_digits("a1c1e1"), "abcdef")
 
 
 if __name__ == "__main__":

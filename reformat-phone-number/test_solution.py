@@ -3,7 +3,7 @@ import sys
 import unittest
 
 sys.path.insert(0, '../implementer')
-from solution import Solution, min_subarray
+from solution import Solution, reformat_number
 
 
 class TestReformatNumber(unittest.TestCase):
@@ -42,9 +42,9 @@ class TestReformatNumber(unittest.TestCase):
     def test_seven_digits(self):
         self.assertEqual(self.s.reformatNumber("1234567"), "123-45-67")
 
-    # min_subarray alias works
+    # reformat_number alias works
     def test_alias(self):
-        self.assertEqual(min_subarray("1-23-45 6"), "123-456")
+        self.assertEqual(reformat_number("1-23-45 6"), "123-456")
 
 
 if __name__ == "__main__":

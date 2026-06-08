@@ -11,6 +11,8 @@ class Solution:
         Returns:
             Number of unique elements.
         """
+        if not nums:
+            return 0
         k = 1
         for i in range(1, len(nums)):
             if nums[i] != nums[k - 1]:

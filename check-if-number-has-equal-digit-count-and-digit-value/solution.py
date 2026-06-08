@@ -15,5 +15,4 @@ class Solution:
         return all(count[str(i)] == int(num[i]) for i in range(len(num)))
 
 
-# Alias per requirements
-rearrange_array = Solution().digitCount
+digit_count = Solution().digitCount

@@ -13,7 +13,7 @@ def max_distance(nums: List[int], k: int) -> int:
     Returns:
         Minimum possible difference between highest and lowest of k scores.
     """
-    nums.sort()
+    nums = sorted(nums)
     return min(nums[i + k - 1] - nums[i] for i in range(len(nums) - k + 1))
 
 

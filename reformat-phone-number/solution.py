@@ -26,5 +26,4 @@ class Solution:
         return '-'.join(blocks)
 
 
-# Alias required by task template
-min_subarray = Solution().reformatNumber
+reformat_number = Solution().reformatNumber

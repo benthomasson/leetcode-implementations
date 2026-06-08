@@ -10,6 +10,8 @@ def subtract_product_and_sum(n: int) -> int:
     Returns:
         Product of digits minus sum of digits.
     """
+    if n == 0:
+        return 0
     product = 1
     total = 0
     while n > 0:

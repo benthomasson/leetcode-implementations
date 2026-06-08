@@ -1,7 +1,7 @@
 import unittest
 import sys
 sys.path.insert(0, "../implementer")
-from solution import Solution, rearrange_array
+from solution import Solution, digit_count
 
 
 class TestDigitCount(unittest.TestCase):
@@ -32,9 +32,9 @@ class TestDigitCount(unittest.TestCase):
         self.assertFalse(self.s.digitCount("2100"))
 
     # Alias works
-    def test_rearrange_array_alias(self):
-        self.assertTrue(rearrange_array("1210"))
-        self.assertFalse(rearrange_array("030"))
+    def test_digit_count_alias(self):
+        self.assertTrue(digit_count("1210"))
+        self.assertFalse(digit_count("030"))
 
 
 if __name__ == "__main__":

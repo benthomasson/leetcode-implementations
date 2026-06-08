@@ -7,6 +7,7 @@ def hamming_weight(n: int) -> int:
     Returns:
         The count of set bits (Hamming weight).
     """
+    n &= 0xFFFFFFFF
     count = 0
     while n:
         n &= n - 1

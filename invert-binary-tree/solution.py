@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 import unittest
+from collections import deque
 
 
 class TreeNode:
@@ -31,9 +32,9 @@ def tree_to_list(root: TreeNode | None) -> list[int | None]:
     if not root:
         return []
     result: list[int | None] = []
-    queue = [root]
+    queue = deque([root])
     while queue:
-        node = queue.pop(0)
+        node = queue.popleft()
         if node:
             result.append(node.val)
             queue.append(node.left)
@@ -50,10 +51,10 @@ def list_to_tree(vals: list[int | None]) -> TreeNode | None:
     if not vals:
         return None
     root = TreeNode(vals[0])
-    queue = [root]
+    queue = deque([root])
     i = 1
     while i < len(vals):
-        node = queue.pop(0)
+        node = queue.popleft()
         if i < len(vals) and vals[i] is not None:
             node.left = TreeNode(vals[i])
             queue.append(node.left)

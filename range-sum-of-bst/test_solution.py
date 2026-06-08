@@ -1,5 +1,6 @@
 """Tests for Range Sum of BST solution."""
 import unittest
+from collections import deque
 from solution import TreeNode, range_sum_bst
 
 
@@ -8,10 +9,10 @@ def _build_tree(values: list) -> TreeNode | None:
     if not values:
         return None
     root = TreeNode(values[0])
-    queue = [root]
+    queue = deque([root])
     i = 1
     while i < len(values):
-        node = queue.pop(0)
+        node = queue.popleft()
         if i < len(values) and values[i] is not None:
             node.left = TreeNode(values[i])
             queue.append(node.left)

@@ -14,5 +14,4 @@ class Solution:
         return sorted(arr, key=lambda x: (bin(x).count('1'), x))
 
 
-# Alias per task spec
-sort_integers_by_the_number_of_1_bits = Solution().sortByBits
+sort_by_bits = Solution().sortByBits

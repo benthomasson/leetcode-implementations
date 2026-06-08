@@ -7,6 +7,8 @@ def binary_gap(n: int) -> int:
     Returns:
         Longest gap between adjacent 1-bits, or 0 if fewer than two 1-bits.
     """
+    if n <= 0:
+        return 0
     max_gap = 0
     last_one = -1
     pos = 0

@@ -1,7 +1,7 @@
 """Greatest English Letter in Upper and Lower Case."""
 
 
-def get_max_occurrences(s: str) -> str:
+def greatest_letter(s: str) -> str:
     """Return the greatest letter appearing in both cases, or empty string.
 
     Args:

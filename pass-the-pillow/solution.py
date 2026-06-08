@@ -8,6 +8,8 @@ def pillowHolder(n: int, time: int) -> int:
     Returns:
         1-indexed position of the pillow holder.
     """
+    if n == 1:
+        return 1
     cycle = n - 1
     full_passes = time // cycle
     remainder = time % cycle

@@ -1,5 +1,5 @@
 import unittest
-from solution import Solution, sort_integers_by_the_number_of_1_bits
+from solution import Solution, sort_by_bits
 
 
 class TestSortByBits(unittest.TestCase):
@@ -26,7 +26,7 @@ class TestSortByBits(unittest.TestCase):
         self.assertEqual(self.s.sortByBits([10000, 0]), [0, 10000])
 
     def test_alias(self):
-        self.assertEqual(sort_integers_by_the_number_of_1_bits([0,1,2,3,4,5,6,7,8]), [0,1,2,4,8,3,5,6,7])
+        self.assertEqual(sort_by_bits([0,1,2,3,4,5,6,7,8]), [0,1,2,4,8,3,5,6,7])
 
 
 if __name__ == '__main__':

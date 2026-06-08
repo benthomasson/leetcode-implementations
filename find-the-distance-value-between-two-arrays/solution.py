@@ -14,7 +14,7 @@ class Solution:
         Returns:
             Number of elements in arr1 with no arr2 element within distance d.
         """
-        arr2.sort()
+        arr2 = sorted(arr2)
         count = 0
         for val in arr1:
             pos = bisect_left(arr2, val)

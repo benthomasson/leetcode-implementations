@@ -7,4 +7,4 @@ class Solution:
         return len(set(Counter(s).values())) == 1
 
 
-make_string_sorted = Solution().areOccurrencesEqual
+are_occurrences_equal = Solution().areOccurrencesEqual

@@ -14,4 +14,4 @@ def findTheDifference(s: str, t: str) -> str:
     Returns:
         The added character.
     """
-    return chr(reduce(xor, (ord(c) for c in s + t)))
+    return chr(reduce(xor, (ord(c) for c in s + t), 0))
