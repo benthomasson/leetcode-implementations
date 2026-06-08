@@ -1,2 +1,6 @@
 __pycache__/
 test_report.json
+reasons.db
+beliefs.md
+network.json
+.code-expert/
